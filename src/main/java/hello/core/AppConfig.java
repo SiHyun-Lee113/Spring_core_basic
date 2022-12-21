@@ -20,9 +20,8 @@ public class AppConfig {
         return new MemberServiceImpl(memberRepository());
     }
 
-
     @Bean
-    public static MemberRepository memberRepository() {
+    public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 
@@ -32,7 +31,7 @@ public class AppConfig {
     }
 
     @Bean
-    public static DiscountPolicy discountPolicy() {
+    public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
 }
